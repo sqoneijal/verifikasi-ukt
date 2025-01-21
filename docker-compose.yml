@@ -1,0 +1,17 @@
+services:
+   verifikasi-ukt-api:
+      container_name: verifikasi-ukt-api
+      build:
+         context: ./
+         dockerfile: ./Dockerfile
+      ports:
+         - 1009:80
+      networks:
+         - pps-network
+      volumes:
+         - ./:/var/www/html
+      restart: always
+
+networks:
+   pps-network:
+      external: true
