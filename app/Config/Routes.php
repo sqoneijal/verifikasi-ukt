@@ -1,8 +1,14 @@
 <?php
 
-use CodeIgniter\Router\RouteCollection;
+$routes = service('routes');
 
-/**
- * @var RouteCollection $routes
- */
-$routes->get('/', 'Home::index');
+function pendaftar($routes): void
+{
+   $routes->group('pendaftar', function ($routes) {
+      $routes->get('download', 'Pendaftar::download');
+
+      $routes->post('simpandatadownload', 'Pendaftar::simpanDataDownload');
+   });
+}
+
+pendaftar($routes);

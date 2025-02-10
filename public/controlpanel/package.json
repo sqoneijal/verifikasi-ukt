@@ -1,0 +1,31 @@
+{
+   "name": "controlpanel",
+   "version": "1.0.0",
+   "description": "",
+   "main": "app.js",
+   "scripts": {
+      "dev": "./pre-dev.sh && esbuild --define:process.env.NODE_ENV=\\\"development\\\" ./src/App.jsx --bundle --watch --alias:~=./src/ --outdir=./bundle --loader:.svg=dataurl --loader:.gif=dataurl --loader:.webp=dataurl --loader:.eot=copy --loader:.png=dataurl --loader:.jpg=copy --loader:.woff=copy --loader:.woff2=copy --loader:.ttf=copy --sourcemap --log-limit=0 --inject:./src/js/jquery.min.js",
+      "build": "./pre-build.sh && ./esbuild.config.js && ./build.sh",
+      "build_tinymce": "node ./build_tinymce.js"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "devDependencies": {
+      "esbuild": "0.24.2"
+   },
+   "dependencies": {
+      "@reduxjs/toolkit": "^2.5.0",
+      "axios": "^1.7.9",
+      "feather-icons": "^4.29.2",
+      "jquery": "^3.7.1",
+      "nprogress": "^0.2.0",
+      "react": "^19.0.0",
+      "react-bootstrap": "^2.10.9",
+      "react-dom": "^19.0.0",
+      "react-hot-toast": "^2.5.1",
+      "react-redux": "^9.2.0",
+      "react-router-dom": "^7.1.3",
+      "simplebar": "^6.3.0"
+   }
+}

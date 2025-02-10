@@ -126,3 +126,9 @@ nb-configuration.xml
 /phpunit*.xml
 
 tests
+
+public/controlpanel/node_modules
+public/controlpanel/bundle
+public/controlpanel/pre-dev.sh
+public/controlpanel/pre-build.sh
+app/Config/Database.php
